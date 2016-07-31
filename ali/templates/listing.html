@@ -1,0 +1,14 @@
+<form ng-submit="searchData()">
+<input type="text" ng-model="q" ><input type="submit" value="Search">
+</form>
+<div>Searching ..{{q}}</div>
+<table width="100%" class="table">
+    <tr ng-repeat="list in listings">
+        <td>{{list.id}}</td>
+        <td>{{list.NAME}}</td>
+    </tr>
+
+</table>
+<br/>
+<button ng-click="prevPage()">Prev Page</button>
+<button ng-click="nextPage()">Next Page</button>
